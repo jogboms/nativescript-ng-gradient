@@ -1,0 +1,38 @@
+{
+  "name": "nativescript-ng-gradient",
+  "version": "0.0.1b",
+  "description": "Use Gradients on your Nativescript + Angular UI",
+  "license": "MIT",
+  "readme": "README.md",
+  "repository": "Repo",
+  "nativescript": {
+    "id": "org.nativescript.nativescript-ng-gradient",
+    "tns-ios": {
+      "version": "3.0.1"
+    },
+    "tns-android": {
+      "version": "3.0.1"
+    }
+  },
+  "dependencies": {
+    "@angular/common": "~4.1.0",
+    "@angular/compiler": "~4.1.0",
+    "@angular/core": "~4.1.0",
+    "@angular/platform-browser": "~4.1.0",
+    "nativescript-angular": "~3.0.0",
+    "nativescript-ng-gradient": "../",
+    "reflect-metadata": "~0.1.8",
+    "rxjs": "~5.3.0",
+    "tns-core-modules": "~3.0.0"
+  },
+  "devDependencies": {
+    "babel-traverse": "6.23.1",
+    "babel-types": "6.23.0",
+    "babylon": "6.16.1",
+    "lazy": "1.0.11",
+    "nativescript-dev-typescript": "~0.4.0",
+    "tns-core-modules": "~3.0.0",
+    "typescript": "~2.2.1",
+    "zone.js": "~0.7.2"
+  }
+}
