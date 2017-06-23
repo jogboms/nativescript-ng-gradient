@@ -1,5 +1,5 @@
-# Nativescript @Ngrx/Store Debugger
-An Agular2+ directive for adding Gradients to your Nativescript UI.
+# Nativescript + Angular Gradients
+An Angular directive for adding Gradients to your Nativescript UI.
 
 ## How To
 * Install.
