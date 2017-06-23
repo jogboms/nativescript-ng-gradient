@@ -44,12 +44,15 @@ import { Types, Orientation } from "nativescript-ng-gradient";
 })
 export class AppComponent {
   public gColors = ['#666666', '#eeeeee'];
-  public gType = Types.RADIAL_GRADIENT;
+  public gType = Types.LINEAR_GRADIENT;
   public gOrient = Orientation.TOP_BOTTOM;
 }
 ```
 
 * Thats all. No dependencies. 
+
+### Note
+Still can't seem to get RADIAL_GRADIENT to work
 
 ## License
 
