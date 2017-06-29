@@ -1,5 +1,4 @@
-import { Directive, ElementRef, Input, OnInit } from '@angular/core';
-import { View } from 'ui/core/view';
+import { Directive, HostListener, ElementRef, Input } from '@angular/core';
 import { Color } from 'color';
 
 declare const android: any;
@@ -21,14 +20,15 @@ export const Orientation = {
 }
 
 @Directive({ selector: '[nsgrad]' })
-export class NSGradientDirective implements OnInit {
+export class NSGradientDirective {
   @Input('nsgrad') gradientColors: string[] = ['#ffffff', '#000000'];
   @Input('nsgradOrient') gradientOrient: string = Orientation.LEFT_RIGHT;
   @Input('nsgradType') gradientType: number = Types.LINEAR_GRADIENT;
-
+  
   constructor(private el: ElementRef) { }
 
-  ngOnInit() {
+  @HostListener('loaded', ['$event'])
+  onLoaded(event) {
     this.makeAndroid();
   }
 
