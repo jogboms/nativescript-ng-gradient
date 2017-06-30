@@ -24,6 +24,7 @@ export class NSGradientDirective {
   @Input('nsgrad') gradientColors: string[] = ['#ffffff', '#000000'];
   @Input('nsgradOrient') gradientOrient: string = Orientation.LEFT_RIGHT;
   @Input('nsgradType') gradientType: number = Types.LINEAR_GRADIENT;
+  @Input('nsgradRadius') gradientRadius: number = 0;
   
   constructor(private el: ElementRef) { }
 
@@ -41,6 +42,7 @@ export class NSGradientDirective {
     const orient = Orientation[this.gradientOrient] || Orientation.LEFT_RIGHT; // Defaults to LEFT_RIGHT
     const orientation = android.graphics.drawable.GradientDrawable.Orientation[orient];
     backgroundDrawable.setOrientation(orientation);
+    backgroundDrawable.setCornerRadius(this.gradientRadius);
     this.el.nativeElement.android.setBackgroundDrawable(backgroundDrawable);
   }
 }
