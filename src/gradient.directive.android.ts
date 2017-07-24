@@ -30,10 +30,10 @@ export class NSGradientDirective {
 
   @HostListener('loaded', ['$event'])
   onLoaded(event) {
-    this.makeAndroid();
+    this.makeGradient();
   }
 
-  makeAndroid() {
+  makeGradient() {
     let backgroundDrawable = new android.graphics.drawable.GradientDrawable();
     let colors = this.gradientColors.map(c => (new Color(c)).android);
     backgroundDrawable.setColors(colors);
