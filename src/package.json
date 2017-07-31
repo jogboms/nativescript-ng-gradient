@@ -1,6 +1,6 @@
 {
   "name": "nativescript-ng-gradient",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "description": "Use Gradients on your Nativescript + Angular UI",
   "license": "MIT",
   "readme": "README.md",
@@ -14,7 +14,7 @@
       "version": "3.0.1"
     }
   },
-  "dependencies": {
+  "peerDependencies": {
     "@angular/common": "~4.1.0",
     "@angular/compiler": "~4.1.0",
     "@angular/core": "~4.1.0",

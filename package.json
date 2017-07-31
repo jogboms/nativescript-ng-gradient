@@ -1,6 +1,6 @@
 {
   "name": "nativescript-ng-gradient",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "description": "Use Gradients on your Nativescript + Angular UI",
   "main": "index",
   "typings": "index.d.ts",
@@ -36,33 +36,34 @@
     "prebuild": "npm i && cd src && npm i",
     "preparedemo": "npm run build; cd src; tns plugin remove nativescript-ng-gradient; tns plugin add ..; tns install",
     "tsc": "tsc -p .",
-    "prepare": "cp package.json packagedev.json && mv packagepublish.json package.json",
-    "complete": "mv package.json packagepublish.json && mv packagedev.json package.json",
-    "push-pub": "git push origin && git push origin --tags && npm run prepare && npm publish && npm run complete",
+    "push-pub": "git push origin && git push origin --tags && npm publish",
     "setup": "npm run build"
   },
-  "dependencies": {
+  "dependencies": {},
+  "peerDependencies": {
+    "@angular/core": "~4.1.0",
+    "nativescript-angular": "~3.0.0",
+    "tns-core-modules": "~3.0.0"
+  },
+  "devDependencies": {
     "@angular/common": "~4.1.0",
     "@angular/compiler": "~4.1.0",
     "@angular/core": "~4.1.0",
     "@angular/platform-browser": "~4.1.0",
-    "@ngrx/core": "^1.2.0",
-    "@ngrx/effects": "^2.0.3",
-    "@ngrx/store": "^2.2.2",
+    "nativescript-dev-typescript": "~0.4.0",
+    "babel-traverse": "6.23.1",
+    "babel-types": "6.23.0",
+    "babylon": "6.16.1",
+    "lazy": "1.0.11",
+    "tns-core-modules": "~3.0.0",
+    "typescript": "~2.2.1",
+    "zone.js": "~0.7.2",
 		"rimraf": "^2.5.1",
     "nativescript-angular": "~3.0.0",
     "reflect-metadata": "~0.1.8",
     "rxjs": "~5.3.0",
     "zone.js": "~0.7.2",
-    "tns-core-modules": "~3.0.0"
-  },
-  "peerDependencies": {
-    "@angular/core": ">=4.0.0",
-    "nativescript-angular": ">=3.0.0",
-    "tns-core-modules": ">=3.0.0"
-  },
-  "devDependencies": {
-    "nativescript-dev-typescript": "~0.4.0",
+    "tns-core-modules": "~3.0.0",
     "typescript": "~2.2.1"
   }
 }
