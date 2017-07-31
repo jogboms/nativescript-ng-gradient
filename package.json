@@ -32,9 +32,9 @@
   "homepage": "https://github.com/jogboms/nativescript-ng-gradient#readme",
   "scripts": {
     "build": "ngc && npm run tsc",
-    "clean": "rm -rf src/platforms",
-    "prebuild": "npm i && cd src && npm i",
-    "preparedemo": "npm run build; cd src; tns plugin remove nativescript-ng-gradient; tns plugin add ..; tns install",
+    "clean": "rm -rf demo/platforms",
+    "prebuild": "npm i",
+    "preparedemo": "npm run build; cd demo; tns plugin remove nativescript-ng-gradient; tns plugin add ..; tns install",
     "tsc": "tsc -p .",
     "push-pub": "git push origin && git push origin --tags && npm publish",
     "setup": "npm run build"
